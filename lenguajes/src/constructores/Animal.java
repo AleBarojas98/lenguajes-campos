@@ -3,23 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nominas1;
+package constructores;
 
 /**
  *
  * @author campitos
  */
-class Trabajador {
-    private long  numeroSeguro;
+public class Animal {
     private String nombre;
-    private String paterno;
-
-    public long getNumeroSeguro() {
-        return numeroSeguro;
-    }
-
-    public void setNumeroSeguro(long numeroSeguro) {
-        this.numeroSeguro = numeroSeguro;
+    private int edad;
+    
+    public Animal(){
+        edad=1000;
     }
 
     public String getNombre() {
@@ -30,11 +25,12 @@ class Trabajador {
         this.nombre = nombre;
     }
 
-    public String getPaterno() {
-        return paterno;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setPaterno(String paterno) {
-        this.paterno = paterno;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
+    
 }
