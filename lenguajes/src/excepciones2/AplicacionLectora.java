@@ -22,6 +22,7 @@ public class AplicacionLectora extends javax.swing.JFrame {
      */
     public AplicacionLectora() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -84,9 +85,10 @@ public class AplicacionLectora extends javax.swing.JFrame {
             // TODO add your handling code here:
 
             JFileChooser selector=new JFileChooser();
-            selector.showOpenDialog(this);
+            selector.showOpenDialog(this); 
             
             File file=    selector.getSelectedFile();
+            ValidacionArchivo.validarExtencion(file);
             ModeloLector modelo=new ModeloLector();
             textoResultado.setText(  modelo.leerArchivo(file)  );
         } catch (Exception ex) { 
