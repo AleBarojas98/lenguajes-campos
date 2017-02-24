@@ -18,8 +18,8 @@ public class ValidacionArchivo {
     //Como obtener la extenion
      int indice1=   nombre.indexOf(".");
      int indice2=   nombre.length();
-     String extencion=nombre.substring(indice1-1, indice2);
-       
+     String extencion=nombre.substring(indice1+1, indice2);
+       System.out.println(extencion);
      if(!extencion.equals("txt"))
          throw  new ExtencionNoValidaException();
        
@@ -27,7 +27,12 @@ public class ValidacionArchivo {
    
    public static void validarMayusculas(File file)throws MayusculasException{
        String nombre=file.getName();
-       //usar toUpprCase() o toLowerCase()
-      // String mayusculas=nombre.t
+       int indice1=   nombre.indexOf(".");
+       String name=nombre.substring(0,indice1);
+       
+       String mayusculas=name.toUpperCase();
+    
+       if(name.equals(mayusculas))throw new MayusculasException();
+       
    }
 }
