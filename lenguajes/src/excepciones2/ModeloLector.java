@@ -26,7 +26,7 @@ public class ModeloLector {
           
           builder.append((char)ch);
       }
-      
+      String nada=null;
        informacion=builder.toString();
        
        return informacion;
